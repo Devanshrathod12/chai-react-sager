@@ -13,7 +13,7 @@ const AxiosApi = () => {
    })
   return (
     <div>  
-        <input type="text" value={id} onChange={e=> setid(e.target.value).priventDefult()} />
+        <input type="text" value={id} onChange={e=>setid(e.target.value)} />
         {first.title} {first.id} {first.body}
     </div>
   )
