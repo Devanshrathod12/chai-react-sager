@@ -2,8 +2,9 @@ import {React,useEffect,useState} from 'react'
 import axios from 'axios'
 const AxiosApi = () => {
     const [first, setfirst] = useState({})
+    const [id,setid]=useState(1)
    useEffect(()=>{
-    axios.get("https://jsonplaceholder.typicode.com/posts/19").then(res=>{
+    axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`).then(res=>{
         console.log(res);
         setfirst(res.data)
     }).catch(err=>{
@@ -12,7 +13,8 @@ const AxiosApi = () => {
    })
   return (
     <div>  
-        {first.title}
+        <input type="text" value={id} onChange={e=> setid(e.target.value).priventDefult()} />
+        {first.title} {first.id} {first.body}
     </div>
   )
 }
