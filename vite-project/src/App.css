@@ -1,2 +1,17 @@
-
+/* App.css */
+.centered-div {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    background-color: #2c2a2a; /* Background color */
+  }
+  
+  .content {
+    padding: 20px; /* Optional: Add some padding inside the div */
+    color: white; /* Optional: Text color for contrast */
+    font-size: 20px;
+    background-color: #568c69; /* Optional: Font size */
+  }
+  
 
