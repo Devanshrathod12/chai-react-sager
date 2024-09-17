@@ -27,7 +27,6 @@ const AxiosApi = () => {
       <input type="text" value={id} onChange={(e) => setid(e.target.value)} />
       <button onClick={ClickData}> mujhe Data Dedo</button>
      <p>{first.title}</p> <p>{first.id}</p> <p>{first.body}</p>  
-
     </div>
   );
 };
