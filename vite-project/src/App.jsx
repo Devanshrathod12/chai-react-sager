@@ -1,4 +1,4 @@
-import React, { useState , useMemo } from "react";
+import React, { useCallback, useState} from "react";
 import "./App.css";
 // import Function from './component/Function/Function'
 // import NamedandDfault,{Devansh,Sager,Bhart} from './component/NamedandDfault'
@@ -7,38 +7,29 @@ import "./App.css";
 //import SP1 from './component/Practice/SP1'
 //import SP2 from './component/Practice/SP2'
 //import SP3 from './component/Practice/SP3'
-// import A1 from './component/context/A1'
+import A1 from './component/context/A1'
 // let Vj = createContext();
 //import { useReducer } from "react";
 
-const App = () => {
+const App = () => { 
 
   const [first, setfirst] = useState(0)
-  const [Toggle, setToggle] = useState(true)
-
   function func(){
-    setfirst(first + 1)
+    setfirst(first+1)
   }
-  
- function sum(a,b){
-  console.log("hi this is console log")
-   return (a+b)
- }
-
-  const result = useMemo(() => {
-      return sum(3,5)
-  },[Toggle])
-
-  
+  const fun2 = useCallback(
+    () => {
+      
+    },
+    [first],
+  )
   
   return (
     <div className="centered-div">
       <div className="content">
-       <button onClick={func}>triggert</button>
-       <p>{first}{result}</p>
-       <button onClick={()=>{
-        setToggle(!Toggle)
-       }}>{(Toggle)?"this is a button":"this is not button"}</button>
+      <button  onClick={func} >trigger</button>
+      <h2>{first}</h2>
+       <A1 fun2={fun2}  />
       </div>
     </div>
   );
@@ -82,6 +73,9 @@ export default App;
 // </form>
 
 
+
+//==================================
+
 //const reducer = (state, action) => {
 //   switch (action.type) {
 //     case "increment":
@@ -110,3 +104,31 @@ export default App;
 // >
 //   +
 // </button>
+
+
+//==================================  usememo 
+
+ {/* <button onClick={func}>triggert</button>
+       <p>{first}{result}</p>
+       <button onClick={()=>{
+        setToggle(!Toggle)
+       }}>{(Toggle)?"this is a button":"this is not button"}</button> */}
+
+       //   const [first, setfirst] = useState(0)
+//   const [Toggle, setToggle] = useState(true)
+
+//   function func(){
+//     setfirst(first + 1)
+//   }
+  
+//  function sum(a,b){
+//   console.log("hi this is console log")
+//    return (a+b)
+//  }
+
+//   const result = useMemo(() => {
+//       return sum(3,5)
+//   },[Toggle])
+
+
+//==========================
