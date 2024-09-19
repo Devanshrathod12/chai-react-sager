@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState , useMemo } from "react";
 import "./App.css";
 // import Function from './component/Function/Function'
 // import NamedandDfault,{Devansh,Sager,Bhart} from './component/NamedandDfault'
@@ -9,40 +9,36 @@ import "./App.css";
 //import SP3 from './component/Practice/SP3'
 // import A1 from './component/context/A1'
 // let Vj = createContext();
-import { useReducer } from "react";
+//import { useReducer } from "react";
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "increment":
-      return { count: state.count + 1 };
-    case "decrement":
-      return { count: state.count - 1 };
-    default:
-      throw new Error();
-  }
-};
-const intialstate = { count: 0 };
 const App = () => {
-  const [state, dispatch] = useReducer(reducer, intialstate);
 
+  const [first, setfirst] = useState(0)
+  const [Toggle, setToggle] = useState(true)
+
+  function func(){
+    setfirst(first + 1)
+  }
+  
+ function sum(a,b){
+  console.log("hi this is console log")
+   return (a+b)
+ }
+
+  const result = useMemo(() => {
+      return sum(3,5)
+  },[Toggle])
+
+  
+  
   return (
     <div className="centered-div">
       <div className="content">
-        Count : {state.count}
-        <button
-          onClick={() => {
-            dispatch({ type: "decrement" });
-          }}
-        >
-          -
-        </button>
-        <button
-          onClick={() => {
-            dispatch({ type: "increment" });
-          }}
-        >
-          +
-        </button>
+       <button onClick={func}>triggert</button>
+       <p>{first}{result}</p>
+       <button onClick={()=>{
+        setToggle(!Toggle)
+       }}>{(Toggle)?"this is a button":"this is not button"}</button>
       </div>
     </div>
   );
@@ -66,6 +62,8 @@ export default App;
 //<A1 />
 //</Vj.Provider>
 
+//, { useRef }
+
 //const first = useRef(null)
 // const submit = (e) => {
 //   e.preventDefault()
@@ -82,3 +80,33 @@ export default App;
 //   <input ref={first} />
 //   <button>submit</button>
 // </form>
+
+
+//const reducer = (state, action) => {
+//   switch (action.type) {
+//     case "increment":
+//       return { count: state.count + 1 };
+//     case "decrement":
+//       return { count: state.count - 1 };
+//     default:
+//       throw new Error();
+//   }
+// };
+// const intialstate = { count: 0 };
+
+// const [state, dispatch] = useReducer(reducer, intialstate);
+// Count : {state.count}
+// <button
+//   onClick={() => {
+//     dispatch({ type: "decrement" });
+//   }}
+// >
+//   -
+// </button>
+// <button
+//   onClick={() => {
+//     dispatch({ type: "increment" });
+//   }}
+// >
+//   +
+// </button>
