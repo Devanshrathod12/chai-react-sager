@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import "./App.css";
 // import Function from './component/Function/Function'
 // import NamedandDfault,{Devansh,Sager,Bhart} from './component/NamedandDfault'
@@ -7,17 +7,21 @@ import "./App.css";
 //import SP1 from './component/Practice/SP1'
 //import SP2 from './component/Practice/SP2'
 //import SP3 from './component/Practice/SP3'
-//import A1 from './component/context/A1'
+import A1 from './component/context/A1'
 // let Vj = createContext();
 //import { useReducer } from "react";
 
-const App = () => { 
-  
- 
+const App = () => {
+  const first = useRef();
+  function func() {
+    console.log(first.current.focus());
+  }
   return (
     <div className="centered-div">
       <div className="content">
-    hy sager bhai
+        <A1 ref={first} />
+        {/* <input ref={first} /> */}
+        <button onClick={func}>button</button>
       </div>
     </div>
   );
@@ -40,8 +44,9 @@ export default App;
 //  <Vj.Provider value="context api lernnig with sager bhai" >
 //<A1 />
 //</Vj.Provider>
-
 //, { useRef }
+
+
 
 //const first = useRef(null)
 // const submit = (e) => {
@@ -59,8 +64,6 @@ export default App;
 //   <input ref={first} />
 //   <button>submit</button>
 // </form>
-
-
 
 //==================================
 
@@ -93,22 +96,23 @@ export default App;
 //   +
 // </button>
 
+//==================================  usememo
 
-//==================================  usememo 
-
- {/* <button onClick={func}>triggert</button>
+{
+  /* <button onClick={func}>triggert</button>
        <p>{first}{result}</p>
        <button onClick={()=>{
         setToggle(!Toggle)
-       }}>{(Toggle)?"this is a button":"this is not button"}</button> */}
+       }}>{(Toggle)?"this is a button":"this is not button"}</button> */
+}
 
-       //   const [first, setfirst] = useState(0)
+//   const [first, setfirst] = useState(0)
 //   const [Toggle, setToggle] = useState(true)
 
 //   function func(){
 //     setfirst(first + 1)
 //   }
-  
+
 //  function sum(a,b){
 //   console.log("hi this is console log")
 //    return (a+b)
@@ -118,7 +122,6 @@ export default App;
 //       return sum(3,5)
 //   },[Toggle])
 
-
 //==========================  use collback
 // const [first, setfirst] = useState(0)
 // function func(){
@@ -126,34 +129,33 @@ export default App;
 // }
 // const fun2 = useCallback(
 //   () => {
-    
+
 //   },
 //   [first],
 // )
 
-{/* <button  onClick={func} >trigger</button>
+{
+  /* <button  onClick={func} >trigger</button>
 <h2>{first}</h2>
- <A1 fun2={fun2}  /> */}
+ <A1 fun2={fun2}  /> */
+}
 
-
- //======================================  useLayout 
+//======================================  useLayout
 //  useEffect(() => {
 //   console.log(" async useEffect");
-  
+
 // }, [])
 // useEffect(() => {
 //   console.log("async state");
-  
+
 // }, [])
 
 //  useLayoutEffect(() => {
 //    console.log(" useLayout sync working");
-   
-//  }, []) 
 
+//  }, [])
 
-
-///================================== useforword 
+///================================== useforword
 
 // const first = useRef()
 // function func(){
@@ -166,5 +168,7 @@ export default App;
 //     alert("you are not slected ")
 //    }
 // }
-{/* <A1  ref={first} />
-<button onClick={func} >button</button> */}
+{
+  /* <A1  ref={first} />
+<button onClick={func} >button</button> */
+}

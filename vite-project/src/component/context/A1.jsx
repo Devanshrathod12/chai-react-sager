@@ -1,15 +1,21 @@
-// import React ,{forwardRef} from 'react'
+import React ,{forwardRef,useImperativeHandle,useRef} from 'react'
 
-// const A1 = (props,first) => {
-//   console.log("hyy this is devansh rathod learn react.js with sager gupta");
-  
-//   return (
-//     <div>
-//     <input ref={first} />
-//     </div>
-//   )
-// }
-// //name={props.name}
-// //props
+const A1 = (props,first) => {
+  // console.log("hyy this is devansh rathod learn react.js with sager gupta");
+  const refrence = useRef();
+   useImperativeHandle(first, () => ({
+       focus:()=>{
+      return  refrence.current.value;
+       }
+     }
+   ))
+  return (
+    <div>
+    <input ref={refrence} />
+    </div>
+  )
+}
+//name={props.name}
+//props
 
-// export default forwardRef(A1)
+export default forwardRef(A1)
