@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect} from "react";
+import React, {useRef} from "react";
 import "./App.css";
 // import Function from './component/Function/Function'
 // import NamedandDfault,{Devansh,Sager,Bhart} from './component/NamedandDfault'
@@ -12,26 +12,12 @@ import "./App.css";
 //import { useReducer } from "react";
 
 const App = () => { 
-
- useEffect(() => {
-   console.log(" async useEffect");
-   
- }, [])
- useEffect(() => {
-   console.log("async state");
-   
- }, [])
+  
  
-  useLayoutEffect(() => {
-    console.log(" useLayout sync working");
-    
-  }, [])
-
-
   return (
     <div className="centered-div">
       <div className="content">
-     hyy
+    hy sager bhai
       </div>
     </div>
   );
@@ -148,3 +134,37 @@ export default App;
 {/* <button  onClick={func} >trigger</button>
 <h2>{first}</h2>
  <A1 fun2={fun2}  /> */}
+
+
+ //======================================  useLayout 
+//  useEffect(() => {
+//   console.log(" async useEffect");
+  
+// }, [])
+// useEffect(() => {
+//   console.log("async state");
+  
+// }, [])
+
+//  useLayoutEffect(() => {
+//    console.log(" useLayout sync working");
+   
+//  }, []) 
+
+
+
+///================================== useforword 
+
+// const first = useRef()
+// function func(){
+//    console.log(first.current.value);
+//    let a=first.current.value;
+//    {
+//     (a=="react")?
+//     alert("you are selected for 10 lpa pakeg")
+//     :
+//     alert("you are not slected ")
+//    }
+// }
+{/* <A1  ref={first} />
+<button onClick={func} >button</button> */}
