@@ -7,21 +7,16 @@ import "./App.css";
 //import SP1 from './component/Practice/SP1'
 //import SP2 from './component/Practice/SP2'
 //import SP3 from './component/Practice/SP3'
-import A1 from './component/context/A1'
+//import A1 from './component/context/A1'
 // let Vj = createContext();
 //import { useReducer } from "react";
 
 const App = () => {
-  const first = useRef();
-  function func() {
-    console.log(first.current.focus());
-  }
+
   return (
     <div className="centered-div">
       <div className="content">
-        <A1 ref={first} />
-        {/* <input ref={first} /> */}
-        <button onClick={func}>button</button>
+       hyyy
       </div>
     </div>
   );
@@ -172,3 +167,10 @@ export default App;
   /* <A1  ref={first} />
 <button onClick={func} >button</button> */
 }
+
+
+//============================  useim
+  // const first = useRef();
+  // function func() {
+  //   console.log(first.current.focus());
+  // }
