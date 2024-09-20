@@ -1,4 +1,4 @@
-import React, { useCallback, useState} from "react";
+import React, { useEffect, useLayoutEffect} from "react";
 import "./App.css";
 // import Function from './component/Function/Function'
 // import NamedandDfault,{Devansh,Sager,Bhart} from './component/NamedandDfault'
@@ -7,29 +7,31 @@ import "./App.css";
 //import SP1 from './component/Practice/SP1'
 //import SP2 from './component/Practice/SP2'
 //import SP3 from './component/Practice/SP3'
-import A1 from './component/context/A1'
+//import A1 from './component/context/A1'
 // let Vj = createContext();
 //import { useReducer } from "react";
 
 const App = () => { 
 
-  const [first, setfirst] = useState(0)
-  function func(){
-    setfirst(first+1)
-  }
-  const fun2 = useCallback(
-    () => {
-      
-    },
-    [first],
-  )
-  
+ useEffect(() => {
+   console.log(" async useEffect");
+   
+ }, [])
+ useEffect(() => {
+   console.log("async state");
+   
+ }, [])
+ 
+  useLayoutEffect(() => {
+    console.log(" useLayout sync working");
+    
+  }, [])
+
+
   return (
     <div className="centered-div">
       <div className="content">
-      <button  onClick={func} >trigger</button>
-      <h2>{first}</h2>
-       <A1 fun2={fun2}  />
+     hyy
       </div>
     </div>
   );
@@ -131,4 +133,18 @@ export default App;
 //   },[Toggle])
 
 
-//==========================
+//==========================  use collback
+// const [first, setfirst] = useState(0)
+// function func(){
+//   setfirst(first+1)
+// }
+// const fun2 = useCallback(
+//   () => {
+    
+//   },
+//   [first],
+// )
+
+{/* <button  onClick={func} >trigger</button>
+<h2>{first}</h2>
+ <A1 fun2={fun2}  /> */}
