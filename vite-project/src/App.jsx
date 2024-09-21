@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./App.css";
 // import Function from './component/Function/Function'
 // import NamedandDfault,{Devansh,Sager,Bhart} from './component/NamedandDfault'
@@ -10,13 +10,16 @@ import "./App.css";
 //import A1 from './component/context/A1'
 // let Vj = createContext();
 //import { useReducer } from "react";
+import useMath from "./useMath";
 
 const App = () => {
-
+    const [first, setfirst] = useMath(3)
   return (
     <div className="centered-div">
       <div className="content">
-       hyyy
+       {first}
+       <br />
+       {setfirst}
       </div>
     </div>
   );
