@@ -7,24 +7,36 @@ import "./App.css";
 //import SP1 from './component/Practice/SP1'
 //import SP2 from './component/Practice/SP2'
 //import SP3 from './component/Practice/SP3'
-//import A1 from './component/context/A1'
+import A1 from './component/context/A1'
 // let Vj = createContext();
 //import { useReducer } from "react";
-import useMath from "./useMath";
+//import useMath from "./useMath";
+import {
+  createBrowserRouter,
+  RouterProvider
+} from "react-router-dom";
 
 const App = () => {
-  const [first, setfirst] = useMath(3);
+  const router = createBrowserRouter([
+    {
+      path: "/about",
+      element: <div>hello world devansh</div>,
+    },
+    {
+      path: "/",
+      element: <A1 />,
+    },
+  ])
   return (
-    <div className="centered-div">
-      <div className="content">
-        {first}
-        <br />
-        {setfirst}
+    <div >
+      <div >
+      <RouterProvider router={router} />
       </div>
     </div>
   );
 };
 export default App;
+
 
 // export {Vj}
 // <Func />
