@@ -13,20 +13,18 @@ import "./App.css";
 import useMath from "./useMath";
 
 const App = () => {
-    const [first, setfirst] = useMath(3)
+  const [first, setfirst] = useMath(3);
   return (
     <div className="centered-div">
       <div className="content">
-       {first}
-       <br />
-       {setfirst}
+        {first}
+        <br />
+        {setfirst}
       </div>
     </div>
   );
 };
 export default App;
-
-
 
 // export {Vj}
 // <Func />
@@ -46,8 +44,7 @@ export default App;
 //</Vj.Provider>
 //, { useRef }
 
-
-
+// ================================ use reF houck=======
 //const first = useRef(null)
 // const submit = (e) => {
 //   e.preventDefault()
@@ -65,7 +62,7 @@ export default App;
 //   <button>submit</button>
 // </form>
 
-//==================================
+//================================== reducer hocks
 
 //const reducer = (state, action) => {
 //   switch (action.type) {
@@ -96,8 +93,7 @@ export default App;
 //   +
 // </button>
 
-//==================================  usememo
-
+//==================================  usememo hocks  ================
 {
   /* <button onClick={func}>triggert</button>
        <p>{first}{result}</p>
@@ -122,7 +118,7 @@ export default App;
 //       return sum(3,5)
 //   },[Toggle])
 
-//==========================  use collback
+//==========================  use collback houcks =================
 // const [first, setfirst] = useState(0)
 // function func(){
 //   setfirst(first+1)
@@ -140,7 +136,7 @@ export default App;
  <A1 fun2={fun2}  /> */
 }
 
-//======================================  useLayout
+//======================================  useLayout housk ===================
 //  useEffect(() => {
 //   console.log(" async useEffect");
 
@@ -155,7 +151,7 @@ export default App;
 
 //  }, [])
 
-///================================== useforword
+///================================== useforword houks ==================
 
 // const first = useRef()
 // function func(){
@@ -173,11 +169,10 @@ export default App;
 <button onClick={func} >button</button> */
 }
 
+//============================  useim houcks =====================
+// const first = useRef();
+// function func() {
+//   console.log(first.current.focus());
+// }
 
-//============================  useim
-  // const first = useRef();
-  // function func() {
-  //   console.log(first.current.focus());
-  // }
-
-  // ======================== useimplisethendel========
+// ======================== useimplisethendel==================
