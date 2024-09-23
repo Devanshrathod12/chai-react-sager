@@ -1,13 +1,13 @@
-// import React from 'react'
-// import A3 from './A3'
-
-// const A2 = () => {
-//   return (
-//     <div>
-//       <A3  />
-//     </div>
-//   )
-// }
+import React from 'react'
+import { Link } from 'react-router-dom'
+const A2 = () => {
+  return (
+    <div>
+    
+        <Link to="/portfoliyo" > hy this is portfoliyo</Link>
+    </div>
+  )
+}
 // //name={props.name}
 // //props
-// export default A2
+export default A2

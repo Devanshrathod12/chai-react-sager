@@ -8,6 +8,8 @@ import "./App.css";
 //import SP2 from './component/Practice/SP2'
 //import SP3 from './component/Practice/SP3'
 import A1 from './component/context/A1'
+import A2 from './component/context/A2'
+import ErrorS from "./component/context/ErrorS";
 // let Vj = createContext();
 //import { useReducer } from "react";
 //import useMath from "./useMath";
@@ -19,12 +21,20 @@ import {
 const App = () => {
   const router = createBrowserRouter([
     {
-      path: "/about",
+      path: "/",
       element: <div>hello world devansh</div>,
     },
     {
-      path: "/",
+      path: "/about",
       element: <A1 />,
+    },
+    {
+      path: "/portfoliyo",
+      element: <A2 />,
+    },
+    {
+      path: "*",
+      element: <ErrorS/>,
     },
   ])
   return (

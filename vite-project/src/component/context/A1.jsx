@@ -26,7 +26,7 @@ import { Link } from 'react-router-dom'
 const A1 = () => {
   return (
     <div>
-      <Link to="/about" ></Link>
+      <Link to="/about" >this is about  page</Link>
     </div>
   )
 }
