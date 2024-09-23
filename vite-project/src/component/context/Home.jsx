@@ -1,17 +1,18 @@
 import React from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
-
-let a = 4;
+import {useNavigate} from 'react-router-dom'
 const Home = () => {
+  const navigate = useNavigate()
+  function navigation(){
+    navigate("/About")
+  }
   return (
-    <>
     <div>
-      <NavLink to="/"><li>HOME</li></NavLink>
-      <NavLink to="/About"><li>About</li></NavLink>
-      <NavLink to="/Portfoliyo"><li>Portfoliyo</li></NavLink>
+      <form onSubmit={navigation} >
+        <input type="text" />
+        <input type="text" />
+        <button type='submit' >sibmit</button>
+      </form>
     </div>
-   { (a==5)? <Outlet/> : "somthing went wrong"}
-    </>
   )
 }
 

@@ -24,11 +24,10 @@ const App = () => {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home/>} >
+      <Route path="/" element={<Home/>}/>
       <Route path="/about" element={<About/>} />
       <Route path="/portfoliyo" element={<Portfoliyo/>}/>
       <Route path="*" element={<ErrorS/>}/>
-       </Route>
     </Routes>
     </BrowserRouter>
   );
