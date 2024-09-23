@@ -10,39 +10,28 @@ import "./App.css";
 import A1 from './component/context/A1'
 import A2 from './component/context/A2'
 import ErrorS from "./component/context/ErrorS";
+import Home from "./component/context/Home";
+import About from "./component/context/About";
+import Portfoliyo from "./component/context/Portfoliyo";
 // let Vj = createContext();
 //import { useReducer } from "react";
 //import useMath from "./useMath";
 import {
-  createBrowserRouter,
-  RouterProvider
+  BrowserRouter,Route,Routes
 } from "react-router-dom";
 
 const App = () => {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <div>hello world devansh</div>,
-    },
-    {
-      path: "/about",
-      element: <A1 />,
-    },
-    {
-      path: "/portfoliyo",
-      element: <A2 />,
-    },
-    {
-      path: "*",
-      element: <ErrorS/>,
-    },
-  ])
   return (
-    <div >
-      <div >
-      <RouterProvider router={router} />
-      </div>
-    </div>
+    <BrowserRouter>
+    <Routes>
+
+      <Route path="/" element={<Home/>} />
+      <Route path="/about" element={<About/>} />
+      <Route path="/portfoliyo" element={<Portfoliyo/>}/>
+      <Route path="*" element={<ErrorS/>}/>
+
+    </Routes>
+    </BrowserRouter>
   );
 };
 export default App;
