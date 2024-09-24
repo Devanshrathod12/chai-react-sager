@@ -7,31 +7,36 @@ import "./App.css";
 //import SP1 from './component/Practice/SP1'
 //import SP2 from './component/Practice/SP2'
 //import SP3 from './component/Practice/SP3'
-import A1 from './component/context/A1'
-import A2 from './component/context/A2'
-import ErrorS from "./component/context/ErrorS";
-import Home from "./component/context/Home";
-import About from "./component/context/About";
-import Portfoliyo from "./component/context/Portfoliyo";
-// let Vj = createContext();
-//import { useReducer } from "react";
-//import useMath from "./useMath";
-import {
-  BrowserRouter,Route,Routes
-} from "react-router-dom";
+// import A1 from './component/context/A1'
+// import A2 from './component/context/A2'
+// import ErrorS from "./component/context/ErrorS";
+// import Home from "./component/context/Home";
+// import About from "./component/context/About";
+// import Portfoliyo from "./component/context/Portfoliyo";
+// // let Vj = createContext();
+// //import { useReducer } from "react";
+// //import useMath from "./useMath";
+// import {
+//   BrowserRouter,Route,Routes
+// } from "react-router-dom";
+import User from "./component/context/User";
 
 const App = () => {
+  
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home/>}/>
-      <Route path="/about" element={<About/>} />
-      <Route path="/portfoliyo" element={<Portfoliyo/>}/>
-      <Route path="*" element={<ErrorS/>}/>
-    </Routes>
-    </BrowserRouter>
-  );
-};
+    // <BrowserRouter>
+    // <Routes>
+    //   <Route path="/" element={<Home/>}/>
+    //   <Route path="/about" element={<About/>} />
+    //   <Route path="/portfoliyo" element={<Portfoliyo/>}/>
+    //   <Route path="*" element={<ErrorS/>}/>
+    // </Routes>
+    // </BrowserRouter>
+    <div>app
+      <User />
+    </div>
+  )
+}
 export default App;
 
 
@@ -185,3 +190,20 @@ export default App;
 // }
 
 // ======================== useimplisethendel==================
+
+
+//================redux serice 33 video =============
+
+// function fun(value){
+//   const obj={
+//     name:"devansh",
+//     nan:value,
+//     integ:0
+//   }
+//   return obj
+// }
+// const sun = fun(3)
+// console.log(sun);
+// sun.name = "sager"
+// sun.nan=[1,2,3,4,5,6,7,"devansh","hashal","bhart","mohit"]
+// console.log(sun);
