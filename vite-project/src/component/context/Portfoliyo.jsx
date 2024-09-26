@@ -1,11 +1,11 @@
-// import React from 'react'
+import React from 'react'
 
-// const Portfoliyo = () => {
-//   return (
-//     <div>
-//       <div>its portfoliyo</div>
-//     </div>
-//   )
-// }
+const Portfoliyo = () => {
+  return (
+    <div>
+      <div>its portfoliyo</div>
+    </div>
+  )
+}
 
-// export default Portfoliyo
+export default Portfoliyo

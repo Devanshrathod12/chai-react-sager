@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { increase , decrease } from "../../count";
+import { increase , decrease } from "./count";
 
 const User = () => {
   const count = useSelector((state)=>state.count);
@@ -20,5 +20,4 @@ const User = () => {
     </div>
   );
 };
-
 export default User;

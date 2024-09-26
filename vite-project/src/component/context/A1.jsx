@@ -20,16 +20,16 @@
 
 // export default forwardRef(A1)
 
-// import React from 'react'
-// import { Link } from 'react-router-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-// const A1 = () => {
-//   return (
-//     <div>
-//       <Link to="/about" >this is about  page</Link>
-//     </div>
-//   )
-// }
+const A1 = () => {
+  return (
+    <div>
+      <Link to="/about" >this is about  page</Link>
+    </div>
+  )
+}
 
-// export default A1
+export default A1
 
