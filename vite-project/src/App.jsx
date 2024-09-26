@@ -1,11 +1,10 @@
 import React from "react";
 import "./App.css";
-import UseEffact from "./component/UseEffect/UseEffact";
+import Pass from "./component/PropsFuncPass/pass";
 const App = () => {
+ 
   return (
-    <div>
-      <UseEffact />
-    </div>
+     <Pass />
   )
 }
 export default App;
