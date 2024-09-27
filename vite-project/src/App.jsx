@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
-import Pass from "./component/PropsFuncPass/pass";
+import LinkRout from "./component/LinkRoutees/linkRout";
 const App = () => {
  
   return (
-     <Pass />
+  <LinkRout />
   )
 }
 export default App;
